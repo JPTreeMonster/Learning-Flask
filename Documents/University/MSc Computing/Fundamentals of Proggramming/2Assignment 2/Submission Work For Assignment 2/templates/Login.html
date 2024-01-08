@@ -1,0 +1,18 @@
+{% extends 'base_html/base.html' %}
+{% block content %}
+<br>
+<center>
+<h1>Login Page for James-Patrick McCrossan</h1>
+<br>
+<h2><i>Login to view inquires</i></h2>
+<br>
+<form id="Login_Check" method="post" action="{{ url_for('login_post') }}">
+    <label><h2>Name:</h2><input type='text' name='username'><br></label>
+    <br>
+    <label><h2>Password</h2><input type='text' name='password'><br></label>
+    <br>
+    <button type="submit">Submit</button>
+    <h4><i>Hint! See read me file...</i></h4>
+</form>
+</center>
+{% endblock %}

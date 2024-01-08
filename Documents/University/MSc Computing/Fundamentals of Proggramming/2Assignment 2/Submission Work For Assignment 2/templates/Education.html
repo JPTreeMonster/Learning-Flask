@@ -1,0 +1,113 @@
+{% extends 'base_html/base.html' %}
+{% block content %}
+
+<!-- Header -->
+    <table>
+        <tr>
+          <td>
+            <div class="main-V2">
+              <h1> Education</h1>
+            <h3> On this page I go over my education, starting at my Level 3 in Horticulture from Broomfield College in Derbyshire to my BA in Landscape Architecture from the University of Gloucestershire in Cheltenham to my currently ongoing MSc in Computing from Cardiff University in Cardiff.</p>
+            </h3>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Broomfield College -->
+
+        <table>
+            <tr>
+            <td>
+                <div class="main-V2">
+                <h2> Level 3 in Horticulture</h2>
+                <h3> Broomfield College, Derbyshire</h3>
+                <br>
+                <h3>I studied Horticulture at Broomfield College in Derbyshire from 2016-2018. I studied a range of subjects from plant identification to garden design and worked on the grounds of the estate there. Part of this involved time at the glass houses, where we propagated plants and I personally repoted the Orchid collection after the soil quality had degraded.</h3>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <img src="../static/img/Broomfield_Plant.jpg" alt="Broomfield glass house plants" class="image" !width="33.3%">
+                </div>
+            </td>
+            </tr>
+        </table>
+<br>
+<br>
+<br>
+
+<!-- Landscape Architecture -->
+
+<table>
+    <tr>
+    <td>
+        <div class="main-V2">
+        <h2> BA in Landscape Architecture</h2>
+        <h3> University of Gloucestershire, Cheltenham</h3>
+        <br>
+        <h3>From 2019 to 2021 I studied Landscape Architecture at the University of Gloucestershire. Whilst here I learned how to use the adobe suite and AutoCad to create designs for assignments. For example, I designed a ‘home for the lost’, a place where people who are looking for lost people, those who are lost or friends and relatives can meet, heal and grow. I used a series of glowing benches, local Cattle and an education centre in the design.</h3>
+        </div>
+    </td>
+    <td>
+        <div>
+            <img src="../static/img/Landscape_Architecture.jpg" alt="Landscape_Architecture_Image" class="image" !width="33.3%">
+        </div>
+    </td>
+    </tr>
+</table>
+
+<br>
+<br>
+<br>
+
+<!-- MSc in Computing -->
+
+<table>
+    <tr>
+    <td>
+        <div class="main-V2">
+        <h2> MSc in Computing</h2>
+        <h3> Cardiff University, Cardiff</h3>
+        <br>
+        <h3>From September 2023 I started on an MSc in Computing at Cardiff University. This has taught me a lot about coding, including the HTML and CSS used here, as well as Python and JavaScript. I have a long way to go but I am enjoying the journey so far and look forward to using these skills at work.</h3>
+        </div>
+    </td>
+    <td>
+        <div>
+            <img src="../static/img/code.jpg" alt="code_image" class="image" !width="33.3%">
+        </div>
+    </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td width ='33.3%'></td>
+        <td width ='33.3%'>
+        <form id="comment-form" action="{{ url_for('add_comment') }}" method="post">
+            <label for="name"><h2>Name:</h2></label>
+            <input type="text" id="name" name="name">
+            <label for="comment"><h3>Comment:</h3></label>
+            <textarea id="comment" name="comment" width="'33.3%"></textarea>
+            <input type="hidden" name="page" value="Education">
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div id="comments">
+            {% for comment in comments %}
+                <div class="comment" width = '33.3%'>
+                    <p><strong>{{ comment[1] }}:</strong> {{ comment[2] }}</p>
+                </div>
+             {% endfor %}
+        </td>
+        <td width="33.3%"></td>
+    </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
+{% endblock %}

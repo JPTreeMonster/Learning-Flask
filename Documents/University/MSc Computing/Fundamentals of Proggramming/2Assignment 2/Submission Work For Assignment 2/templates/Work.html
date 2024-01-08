@@ -1,0 +1,132 @@
+{% extends "base_html/base.html" %}
+{% block content %}
+
+<!-- Header -->
+
+    <table>
+        <tr>
+          <td>
+            <div class="main-V2">
+              <h1> Work</h1>
+              <h3> On this page I look at some of my past places of work, and work experiance in the case of Haddon Hall. I am proactive, professional and driven. I have taken the initiative in caring for clients as a general support worker, been proactive in designing private estate vegetable gardens as a gardener, presented professionally in high stake team meetings and used my drive to work hard designing as a Graduate Landscape Architect.</h3>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+<!-- Haddon hall -->
+      <table>
+        <tr>
+        <td>
+            <div class="main-V2">
+            <h2> Haddon Hall</h2>
+            <h3> Gardener</h3>
+            <br>
+            <h3>My work experience role involved working in a team to maintain the grounds of Haddon Hall. This involved working with the public, communicating with them and building rapport. I also worked with the team to create and maintain the vegetable garden. This demonstrates my ability to work hard and consistently to high standards.</h3>
+            </div>
+        </td>
+        <td>
+            <div>
+                <img src="../static/img/Haddon_Hall.jpg" alt="Haddon_Hall" class="image" !width="33.3%">
+            </div>
+        </td>
+        </tr>
+    </table>
+
+
+<!-- Private estate -->
+        <table>
+            <tr>
+            <td>
+                <div class="main-V2">
+                <h2> Private Estate</h2>
+                <h3> Assistant Gardener</h3>
+                <br>
+                <h3>
+                    My role involved teamwork for in planning, creating and maintaining greenhouses and landscape features. This work required communicating and building rapport with the owner, his family and guests. This demonstrates my ability to work hard and consistently to high standards.</h3>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <img src="../static/img/Private_Estate.jpg" alt="Private_Estate" class="image" !width="33.3%">
+                </div>
+            </td>
+            </tr>
+        </table>
+<br>
+<br>
+<br>
+
+<!-- Nineveh ridge -->
+<table>
+    <tr>
+    <td>
+        <div class="main-V2">
+        <h2> Nineveh Ridge Care Farm</h2>
+        <h3> General Support Worker</h3>
+        <br>
+        <h3>When I was working at Nineveh Ridge, I worked flexibly in roles like one to one support and leading group activities. I completed a broad range of tasks daily from leading group cooking classes and building ponds whilst also caring, supporting and effectively communicating with clients, staff, carers and parents.</h3>
+        </div>
+    </td>
+    <td>
+        <div>
+            <img src="../static/img/Nineveh_Ridge.jpg" alt="Nineveh_Ridge" class="image" !width="33.3%">
+        </div>
+    </td>
+    </tr>
+</table>
+
+<br>
+<br>
+<br>
+
+<!-- Randall Thorp -->
+<table>
+    <tr>
+    <td>
+        <div class="main-V2">
+        <h2> Randal Thorp</h2>
+        <h3> Graduate Landscape Architect</h3>
+        <br>
+        <h3>I worked in a team to deliver high quality, industry standard work for housing developments, local council's and more. I contributed to design discussion and planning, used a variety of software like the Adobe and Microsoft suite to beat deadlines in this result driven environment. During my time in this role, I demonstrated team skills, and an ability to manage a busy workload and meet deadlines.</h3>
+        </div>
+    </td>
+    <td>
+        <div>
+            <img src="../static/img/Randall_Thorp.jpg" alt="code_image" class="image" !width="33.3%">
+        </div>
+    </td>
+    </tr>
+</table> 
+</body>
+</html>
+
+<!-- Comment section -->
+<table>
+<tr>
+    <td width ='33.3%'></td>
+    <td width ='33.3%'>
+    <form id="comment-form" action="{{ url_for('add_comment') }}" method="post">
+        <label for="name"><h2>Name:</h2></label>
+        <input type="text" id="name" name="name">
+        <label for="comment"><h3>Comment:</h3></label>
+        <textarea id="comment" name="comment" width="'33.3%"></textarea>
+        <input type="hidden" name="page" value="Work">
+        <button type="submit">Submit</button>
+    </form>
+    
+    <div id="comments">
+        {% for comment in comments %}
+            <div class="comment" width = '33.3%'>
+                <p><strong>{{ comment[1] }}:</strong> {{ comment[2] }}</p>
+            </div>
+         {% endfor %}
+    </td>
+    <td width="33.3%"></td>
+</tr>
+</table>
+
+<br>
+<br>
+<br>
+{% endblock %}
