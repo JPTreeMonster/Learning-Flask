@@ -1,0 +1,47 @@
+{% extends 'base_html/base.html' %}
+{% block content %}
+<center>
+<h1>Welcome!</h1>
+<h3>View Inquiries:</h3>
+
+<br>
+<div id="inquiries-container"></div>
+
+<!-- Add script to load inquiries using Ajax -->
+<script>
+    // Fetch and display inquiries when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+        loadInquiries();
+    });
+
+    function loadInquiries() {
+        // Make an Ajax request to fetch inquiries
+        fetch('/get_inquiries')
+            .then(response => response.json())
+            .then(inquiries => {
+                // Display the inquiries on the page
+                displayInquiries(inquiries);
+            })
+            .catch(error => console.error('Error fetching inquiries:', error));
+    }
+
+    function displayInquiries(inquiries) {
+        const inquiriesContainer = document.getElementById('inquiries-container');
+
+        // Clear previous inquiries
+        inquiriesContainer.innerHTML = '';
+
+        // Display each inquiry
+        inquiries.forEach(inquiry => {
+            const inquiryDiv = document.createElement('div');
+            inquiryDiv.classList.add('comment');
+            inquiryDiv.innerHTML = `<p><strong>Name:</strong> ${inquiry[1]}</p>
+                                    <p><strong>Email:</strong> ${inquiry[2]}</p>
+                                    <p><strong>Inquiry:</strong> ${inquiry[3]}</p>
+                                    <br><br>`;
+            inquiriesContainer.appendChild(inquiryDiv);
+        });
+    }
+</script>
+</center>
+{% endblock %}

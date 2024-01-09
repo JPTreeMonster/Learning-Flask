@@ -1,0 +1,399 @@
+{% extends "base_html/base.html" %}
+{% block content %}
+
+<!-- Header -->
+    <table>
+        <tr>
+          <td>
+            <div class="main-V2">
+              <h1>Experience</h1>
+              <br>
+            <h3>From the time we're born we seek to experience and explore the world. On this page I look at two fun and interesting experiences I've had so far.</h3>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Treemonster art -->
+        <table>
+            <tr>
+            <td>
+                <div class="main-V2">
+                <h1> Tree Monster Art</h1>
+                <h2> Art and Clothing</h2>
+                <br>
+                <h3>Tree Monster Art was a small business idea I experimented with to raise awareness for causes by wearing what you beleive in. For this I looked at issues from mental health to air pollution and more, and created both art and designed clothes in response to it. I posted my art on Instagram and created a website for people to see my art and learn more. Every purchase gave to the cause it was raising awareness for, and the designs on the clothing made the artistic repsonse to the issue it depicted seen.</h3>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <img src="../static/img/211203 JPEG 550p x 550p WaterMark png.jpg" alt="Tree_Monster_Art" class="image">
+                </div>
+            </td>
+            </tr>
+        </table>
+
+<br>
+<br>
+<br>
+
+<!-- Image gallery -->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="../static/img/220828 Bee aware, White background and watermark.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="../static/img/220609 Turtle Plastc Tee Design Back.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="../static/img/220202 Atomic Tigers Eyes 4.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="../static/img/220703 David's Passion.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="../static/img/220711 Higher Self.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="../static/img/Art.jpg" style="width:100%">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="../static/img/220828 Bee aware, White background and watermark.jpg" style="width:100%" onclick="currentSlide(1)" alt="Bee Aware">
+      </div>
+      <div class="column"> 
+        <img class="demo cursor" src="../static/img/220609 Turtle Plastc Tee Design Back.jpg" style="width:100%" onclick="currentSlide(2)" alt="Turtle Plastic">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="../static/img/220202 Atomic Tigers Eyes 4.jpg" style="width:100%" onclick="currentSlide(3)" alt="Atomic Tiger Eyes">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="../static/img/220703 David's Passion.jpg" style="width:100%" onclick="currentSlide(4)" alt="David's Passion">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="../static/img/220711 Higher Self.jpg" style="width:100%" onclick="currentSlide(5)" alt="Higher Self">
+      </div> 
+      <div class="column">
+        <img class="demo cursor" src="../static/img/Art.jpg" style="width:100%" onclick="currentSlide(6)" alt="Atomic Turkey Dance">
+      </div>
+    </div>
+  </div>
+
+  <!-- Script for Image gallery -->
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+  </script>
+</td>
+
+
+<br>
+<br>
+<br>
+
+<table>
+  <tr>
+    <td>
+      <!-- Cycle adventure -->
+      <div class="main-V2">
+        <h2> Bilbao to Venice</h2>
+        <h3> Cycle Adventure</h3>
+        <br>
+        <h3>My cycle adventure from Bilbao in northern Spain to Venice via Sardinia was a nearly two month solo cycle adventure. This experience taught me so much about myself and opened my eyes to more of the world, its people and other cultures. I learned how to be fully self reliant, how to be alone and how to be happy with myself. I also learned how to be more open to others and how to be more confident in myself.</h3>
+        <br>
+                <h3>Along the way I met many wonderful people on the road and in hostels, tried food and saw the sights of Eastern Spain and Italy, from dusty castles to the glories of the Sagrada Familia, and the might of ancient Rome's Coliseum to the hidden pearls in the floating city of Venice.</h3>
+              </div>
+            </td>
+
+            <!-- Image map -->
+            <td>
+              <h2>Click the Black Circles to find out more:</h2>
+                        <img src="../static/img/Cycle Map.jpg" alt="Cycle Map" usemap="#cycle-route-map" width="610" height="443">
+        <map name="cycle-route-map">
+          <area shape="circle" coords="229,82,20" data-popup="Portsmouth-image-popup">
+          <area shape="circle" coords="211,252,20" data-popup="Bilbao-image-popup">
+          <area shape="circle" coords="197,276,20" data-popup="Logrono-image-popup">
+          <area shape="circle" coords="228,270,20" data-popup="Pamplona-image-popup">
+          <area shape="circle" coords="246,285,20" data-popup="Zaragoza-image-popup">
+          <area shape="circle" coords="260,300,20" data-popup="Lleida-image-popup">
+          <area shape="circle" coords="271,320,20" data-popup="Barcelona-image-popup">
+          <area shape="circle" coords="412,322,20" data-popup="Porto_Torres-image-popup">
+          <area shape="circle" coords="398,344,20" data-popup="Alguero-image-popup">
+          <area shape="circle" coords="415,369,20" data-popup="Cagliari-image-popup">
+          <area shape="circle" coords="481,312,20" data-popup="Rome-image-popup">
+          <area shape="circle" coords="461,279,20" data-popup="Florence-image-popup">
+          <area shape="circle" coords="459,253,20" data-popup="Bologna-image-popup">
+          <area shape="circle" coords="460,223,20" data-popup="Venice-image-popup">
+          <area shape="circle" coords="266,49,20" data-popup="Birmingham-image-popup">
+        </map>
+
+        <!-- Content per location in Image Map -->
+        <div id="Portsmouth-image-popup" class="popup">
+          <div class="popup-content">
+            <h1>Portsmouth</h1>
+            <p>My journey began by setting off from Portsmouth on a Ferry to Bilbao. I was nervous and excited, meeting some fellow cyclist helped me calm. They were off to watch the Tour De France.</p>
+              <img width='100%'src="../static/img/Portsmouth.jpg" alt="Portsmouth Boat Pic">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Bilbao-image-popup" class="popup">
+          <div class="popup-content">
+
+            <h1>Bilbao</h1>
+            <p>After arriving I had a look around Bilbao, went to the museum and shared a drink with a kind group of strangers, before sleeping on a beach. The next day I met a friend I chanced upon in Manchester and explored Bilbao with her. </p>
+            <img width='100%'src="../static/img/Bilbao.jpg" alt="Puppy, a giant art piece outsidie the Bilbao Guggenheim Art Gallery.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Logrono-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Logrono-image-popup -->
+            <h1>Logrono</h1>
+            <p>I was heading to Pamplona but my sat nav got me a bit lost. I ended up detouring through Logrono, not spending long there. I had a look around and enjoyed probably the best beer of my life by the Cathedral.</p>
+            <img width='100%'src="../static/img/Logrono.jpg" alt="Beautiful countryside near Logrono.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Pamplona-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Pamplona-image-popup -->
+            <h1>Pamplona</h1>
+            <p>I finally made it to Pamplona, met a wonderful group of strangers partied into the night as a part of Pamplona's bull running festival. The next day, hungover and with little sleep I ran with the bulls through the streets and in the arena. I got hit, bled, laughed it off and got a tattoo to remind me of my strength to literally grab a bull by the horns.</p>
+            <img width='100%'src="../static/img/Pamplona.jpg" alt="Me after running with the bulls.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Zaragoza-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Zaragoza-image-popup -->
+            <h1>Zaragoza</h1>
+            <p>In Zaragoza I explored the city, seeing Roman ruins, massive Cathedrals and Zaha Hadid Architecture. I went to an Irish pub with some Hostel friends, tried my first cigar with some Americans and talked and drank the night away.</p>
+            <img width='100%'src="../static/img/Zaragoza.jpg" alt="Me with my bike in Zaragoza.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Lleida-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Lleida-image-popup -->
+            <h1>Lleida</h1>
+            <p>I wasn't long in Lleida as I was focused on getting to Barcelona. I met some wonderful locals, shared food with them, explored the city and had phenomal views from atop a huge rocky cliff top cathedral in the center of the city.</p>
+            <img width='100%'src="../static/img/Lleida.jpg" alt="Architecture in Lleida">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Barcelona-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Barcelona-image-popup -->
+            <h1>Barcelona</h1>
+            <p>I explroed Barcelona top to bottom, made friends and partied. I went around museums and art galleries, saw the sights like the Sagrada Familia and ate great food. I made phenominal memories with wonderful people in this historic city.</p>
+            <img width='100%'src="../static/img/Barcelona.jpg" alt="Sagrada Familia at night.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Porto_Torres-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Porto_Torres-image-popup -->
+            <h1>Porto Torres</h1>
+            <p>I arrived here via ferry from Barcelona. I cycled on after enjoying a dip in the azure blue sea first.</p>
+            <img width='100%'src="../static/img/Porto Torres.jpg" alt="Porto Torres beach.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Alguero-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Alguero-image-popup -->
+            <h1>Alghero</h1>
+            <p>After cycling cliff tops overlooking the ocean I arrived in Alghero. I went for food with a Parisian fashion designer and had a day on the white sandy beaches.</p>
+            <img width='100%'src="../static/img/Alghero.jpg" alt="A beautiful beach day in Alghero.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Cagliari-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Cagliari-image-popup -->
+            <h1>Cagliari</h1>
+            <p>I explroed Cagliari, seeing the sights and breathing in its unique culture.</p>
+            <img width='100%'src="../static/img/Cagliari.jpg" alt="One of Cagliari's Castle views.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Rome-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Rome-image-popup -->
+            <h1>Rome</h1>
+            <p>I spent a week in Rome for my birthday, went to all the famous places like the Colosseum, the Forum and the Vatican in Vatican city. I made a friend for life, as well as a load of memories from the places, people, food, art and architecture.</p>
+            <img width='100%'src="../static/img/Rome.jpg" alt="In front of the Colosseum at night.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Florence-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Florence-image-popup -->
+            <h1>Florence</h1>
+            <p>Florence is probably my favorite city I've ever been to. I was so excited to go to the Uffizi and look at the art of Leonardo again. I visited last year but had to return to this beautiful, deep and awe inspiring place.</p>
+            <img width='100%'src="../static/img/Florence.jpg" alt="My favourite Da Vinci masteriece- The Annunication.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Bologna-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Bologna-image-popup -->
+            <h1>Bologna</h1>
+            <p>I had a few hours looking around Bologna's streets. Its a large and beautiful place with miles of sun sheltered shops, huge historic buildings and a large student popultion.</p>
+            <img width='100%'src="../static/img/Bologna.jpg" alt="Bologna's main square.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Venice-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Venice-image-popup -->
+            <h1>Venice</h1>
+            <p>I ended my trip in the Floating city. I saw the sights, went on some bus boat trips, including to a local beach island where I camped for a few nights with a girl I met in Rome. We looked around the art galleries and explored this city of wonders. The glass works were phenominal, the food, especially the gelato was otherwordly, and everywhere in the main island seemed full of beauty. I flew back from here after an adventire of a life time, one I look forward to repeating along other routes in the future...</p>
+            <img width='100%'src="../static/img/Venice.jpg" alt="Venice's main channel at Sunset, a view from Monet's mind.">  
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <div id="Birmingham-image-popup" class="popup">
+          <div class="popup-content">
+            <!-- Content for Birmingham-image-popup -->
+            <h1>Birmingham</h1>
+            <p>I flew back to Brum, the place I had grown up in. I spent 2 weeks here before moving to Cardiff to start my MSc in Computing.</p>
+            <img width='100%'src="../static/img/Birmingham.jpg" alt="Enroute back to Birmingham, on a bus to Venice airport.">
+            <button class="closePopup">Close</button>
+          </div>
+        </div>
+
+        <!-- Script for image map -->
+          <script>
+
+              var areas = document.querySelectorAll('area');
+              areas.forEach(function (area) {
+                  area.addEventListener("click", function () {
+                      var popupId = this.getAttribute("data-popup");
+                      var popup = document.getElementById(popupId);
+                      popup.classList.add("show");
+                  });
+              });
+          
+              var closeButtons = document.querySelectorAll(".closePopup");
+              closeButtons.forEach(function (closeButton) {
+                  closeButton.addEventListener("click", function () {
+                      this.closest(".popup").classList.remove("show");
+                  });
+              });
+          
+              window.addEventListener("click", function (event) {
+                  if (event.target.classList.contains("popup")) {
+                      event.target.classList.remove("show");
+                  }
+              });
+          </script>
+
+            </td>
+          </tr>
+        </table>
+
+
+
+
+        <br>
+        <br>
+        <br>
+
+        <table>
+          <tr>
+              <td width ='33.3%'></td>
+              <td width ='33.3%'>
+              <form id="comment-form" action="{{ url_for('add_comment') }}" method="post">
+                  <label for="name"><h2>Name:</h2></label>
+                  <input type="text" id="name" name="name">
+                  <label for="comment"><h3>Comment:</h3></label>
+                  <textarea id="comment" name="comment" width="'33.3%"></textarea>
+                  <input type="hidden" name="page" value="Experience">
+                  <button type="submit">Submit</button>
+              </form>
+              
+              <div id="comments">
+                  {% for comment in comments %}
+                      <div class="comment" width = '33.3%'>
+                          <p><strong>{{ comment[1] }}:</strong> {{ comment[2] }}</p>
+                      </div>
+                   {% endfor %}
+              </td>
+              <td width="33.3%"></td>
+          </tr>
+          </table>
+          <br>
+          <br>
+          <br>
+
+
+        </body>
+
+        </html>
+
+        {% endblock %}

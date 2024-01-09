@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css.style.css')}}">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <table style="width:100%">
+        <tr>
+          <td>
+            <h1>CMT 120 Software Engineering</h1>
+          </td>
+          <td>
+            <h3>Assignment 2</h3>
+            <h3>Due Date: 11/01/2024</h3>
+          </td>
+        </tr>
+        <tr>
+            <td>
+                <h2> James-Patrick McCrossan C23096093 </h2>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+  </header>
+
+
+<!-- Navigation -->
+<nav>
+    <div class="topnav" id="myTopnav">
+      <a href="/" ><strong>Home</strong></a>
+      <a href="/EducationPage" >Education</a>
+      <a href="/Experience">Experience</a>
+      <a href="/Work">Work</a>
+      <a href="/Inquiry">Inquire</a>
+      <a href="/Login"><i>Login</i></a>
+    </div>
+  </nav>
+
+<body>
+  {% block content %}
+  <div id="comments">
+    {% for comment in comments %}
+        <div class="comment">
+            <p><strong>{{ comment[1] }}:</strong> {{ comment[2] }}</p>
+        </div>
+    {% endfor %}
+  {% endblock %}  
+  
+</div>
+</body>
+
+<footer>
+  &copy; 2024 James-Patrick McCrossan C23096093
+</footer>
