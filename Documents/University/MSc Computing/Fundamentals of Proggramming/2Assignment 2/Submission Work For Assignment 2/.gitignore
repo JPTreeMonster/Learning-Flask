@@ -1,0 +1,9 @@
+.venv
+
+ReadMe.txt
+
+__pycache__
+
+*.db
+
+wsgi.py

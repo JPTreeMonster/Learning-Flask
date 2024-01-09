@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-from flask_wtf.csrf import CSRFProtect
-csrf = CSRFProtect(app)
 import sqlite3
 
 app = Flask(__name__)
